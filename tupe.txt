@@ -1,0 +1,40 @@
+using System;
+
+public class SamplesArray
+{
+    public static void Main()
+    {
+
+        
+        String[] myArr = {"teze", "ag", "cirkli", "az", "yeke",
+            "al", "yeni", "sar", "at", "ara" , "sal" , "tala"};
+
+        
+        Console.WriteLine(
+            "Aşağıdakı dəyərləri ehtiva edir:");
+        PrintIndexAndValues(myArr);
+
+     
+        Array.Resize(ref myArr, myArr.Length + 5);
+
+        Console.WriteLine("Daha böyük ölçüyə dəyişdikdən sonra,");
+        Console.WriteLine("sətir massivi aşağıdakı dəyərləri ehtiva edir:");
+        PrintIndexAndValues(myArr);
+
+        Array.Resize(ref myArr, 4);
+
+       
+        Console.WriteLine("Daha kiçik ölçüyə dəyişdikdən sonra, ");
+        Console.WriteLine("sətir massivi aşağıdakı dəyərləri ehtiva edir:");
+        PrintIndexAndValues(myArr);
+    }
+
+    public static void PrintIndexAndValues(String[] myArr)
+    {
+        for (int i = 0; i < myArr.Length; i++)
+        {
+            Console.WriteLine("   [{0}] : {1}", i, myArr[i]);
+        }
+        Console.WriteLine();
+    }
+}
